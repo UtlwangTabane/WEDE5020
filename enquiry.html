@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Doughzaar · Catering & Enquiries</title>
+  <!-- Font icons -->
+  <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"> -->
+  <link rel="stylesheet" href="enquiry.css">
+  <link rel="icon" type="image/png" href="logo.png">
+
+</head>
+<body>
+
+<!-- STICKY NAVIGATION -->
+<nav>
+  <div class="container">
+    <a href="index.html" class="logo">Dough<span>zaar</span></a>
+    <div class="nav-links">
+      <a href="index.html">Home</a> <a href="services.html">Menu</a> <a href="about.html">About</a> <a href="enquiry.html">Catering</a> <a href="contact.html">Contact</a>
+      <a href="#" class="btn">Order Now<span class="cart-count" style="background:white;color:var(--navy);border-radius:50%;padding:0 6px;margin-left:6px;display:none;">0</span></a>
+    </div>
+  </div>
+</nav>
+
+<main>
+  <section class="page-header">
+    <div class="container">
+      <h1>Catering & Enquiries</h1>
+      <p>From event catering to community collaboration — let's connect.</p>
+    </div>
+  </section>
+
+  <!-- CUSTOM ORDERS INFO -->
+  <section class="intro-section">
+    <div class="container intro-grid">
+      <div class="intro-text">
+        <h2>Custom orders, made for you</h2>
+        <p>Whether you need a dozen donuts for a meeting or a full dessert table, we work with you to create something memorable. Every order is baked fresh and can be customized.</p>
+        <div class="intro-highlight">
+          <p><i class="fas fa-check-circle"></i> <strong>Minimum order:</strong> 12 donuts for custom requests</p>
+          <p><i class="fas fa-clock"></i> <strong>Lead time:</strong> 72 hours advance notice</p>
+          <p><i class="fas fa-truck"></i> <strong>Delivery:</strong> Cape Town metro (fee applies) or free pickup</p>
+        </div>
+        <p>We also offer branded toppers, custom packaging, and dietary options.</p>
+      </div>
+      <div class="intro-image">
+        <div style="text-align: center; padding: 20px;">
+          <i class="fas fa-box-open"></i> <i class="fas fa-donut"></i> <i class="fas fa-gift"></i>
+          <p style="margin-top: 15px; font-weight: 600; color: var(--navy);">Bulk boxes & party platters</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PRICING TIERS -->
+  <section class="pricing-section">
+    <div class="container">
+      <h2>Pricing Tiers</h2>
+      <p class="pricing-subhead">All tiers include complimentary tasting box (4 donuts).</p>
+      <div class="tier-grid">
+        <div class="tier-card">
+          <div class="tier-name">Sweet Start</div>
+          <div class="tier-price">R350 <small>/ dozen</small></div>
+          <ul class="tier-details">
+            <li><i class="fas fa-check"></i> 12 donuts (classic flavors)</li>
+            <li><i class="fas fa-check"></i> Standard packaging</li>
+            <li><i class="fas fa-check"></i> Pickup included</li>
+            <li><i class="fas fa-times"></i> Custom decorations</li>
+          </ul>
+        </div>
+        <div class="tier-card featured">
+          <span class="featured-badge"><i class="fas fa-star"></i> Most Popular</span>
+          <div class="tier-name">Gourmet Gathering</div>
+          <div class="tier-price">R520 <small>/ dozen</small></div>
+          <ul class="tier-details">
+            <li><i class="fas fa-check"></i> 12 donuts (gourmet mix)</li>
+            <li><i class="fas fa-check"></i> Premium gift box</li>
+            <li><i class="fas fa-check"></i> Custom color glaze</li>
+            <li><i class="fas fa-check"></i> Delivery within 10km (R50)</li>
+          </ul>
+        </div>
+        <div class="tier-card">
+          <div class="tier-name">Celebration</div>
+          <div class="tier-price">R850 <small>/ 24 donuts</small></div>
+          <ul class="tier-details">
+            <li><i class="fas fa-check"></i> 24 donuts (custom flavors)</li>
+            <li><i class="fas fa-check"></i> Edible logo toppers</li>
+            <li><i class="fas fa-check"></i> Tiered stand or individual boxes</li>
+            <li><i class="fas fa-check"></i> Free delivery (Cape Town metro)</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- LEAD GENERATION / ENQUIRY FORM (includes volunteer/sponsor option) -->
+  <section class="form-section">
+    <div class="container">
+      <div class="form-container">
+        <h2>Let's talk donuts</h2>
+        <p>Fill out the form below — whether it's catering, volunteering, or a partnership idea, we'll respond within 24 hours.</p>
+        
+        <form action="#" method="post">
+          <div class="form-row">
+            <div class="form-group">
+              <label for="name">Full Name *</label>
+              <input type="text" id="name" name="name" required>
+            </div>
+            <div class="form-group">
+              <label for="email">Email Address *</label>
+              <input type="email" id="email" name="email" required>
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="form-group">
+              <label for="phone">Phone Number *</label>
+              <input type="tel" id="phone" name="phone" required>
+            </div>
+            <div class="form-group">
+              <label for="inquiry-type">Inquiry Type *</label>
+              <select id="inquiry-type" name="inquiry_type" required>
+                <option value="">Select one</option>
+                <option value="catering">Catering / Event Order</option>
+                <option value="volunteer">Volunteer Interest</option>
+                <option value="sponsor">Sponsorship Opportunity</option>
+                <option value="other">Other</option>
+              </select>
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="form-group">
+              <label for="event-date">Event Date (if applicable)</label>
+              <input type="date" id="event-date" name="event_date">
+            </div>
+            <div class="form-group">
+              <label for="guest-count">Estimated Guests</label>
+              <input type="number" id="guest-count" name="guest_count" min="1">
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="preferred-tier">Preferred Tier (optional)</label>
+            <select id="preferred-tier" name="preferred_tier">
+              <option value="">Not sure yet</option>
+              <option value="sweet-start">Sweet Start</option>
+              <option value="gourmet">Gourmet Gathering</option>
+              <option value="celebration">Celebration</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="message">Tell us more *</label>
+            <textarea id="message" name="message" rows="4" placeholder="Details about your event, volunteer availability, or partnership idea…" required></textarea>
+          </div>
+          <button type="submit" class="btn btn-block">Send Enquiry <i class="fas fa-paper-plane"></i></button>
+          <p style="font-size: 0.85rem; margin-top: 15px; color: var(--text-muted);">We'll get back to you within 24 hours. No payment required now.</p>
+        </form>
+        <p style="margin-top: 20px; font-size: 0.9rem; color: var(--navy); background: #F0E6D8; padding: 10px; border-radius: 30px; text-align: center;">
+          <i class="fas fa-hands-helping" style="color: var(--coral);"></i> 
+          Doughzaar occasionally welcomes volunteers for community events and seeks local sponsors. Select the appropriate option above!
+        </p>
+      </div>
+    </div>
+  </section>
+  <script src="script.js"></script>
+</main>
+
+<footer>
+  <div class="container">
+    <p>© 2025 Doughzaar – Artisanal Donuts. Catering joy, one donut at a time.</p>
+    <p style="margin-top: 10px;"><a href="#">Privacy</a> · <a href="#">Terms</a> · <a href="#">FAQ</a></p>
+  </div>
+</footer>
+
+</body>
+</html>

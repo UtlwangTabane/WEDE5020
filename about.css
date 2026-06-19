@@ -1,0 +1,347 @@
+/* ----- CSS RESET & VARIABLES ----- */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    :root {
+      --navy: #0F1A2F;
+      --cream: #FDF8F0;
+      --coral: #FF7B6B;
+      --coral-dark: #E56555;
+      --text-dark: #2E241E;
+      --text-muted: #5A4E45;
+      --white: #FFFFFF;
+      --shadow-sm: 0 4px 12px rgba(0,0,0,0.05);
+      --shadow-md: 0 8px 20px rgba(0,0,0,0.08);
+      --border-radius: 40px;
+      --border-radius-sm: 20px;
+    }
+
+    body {
+      font-family: 'Palatino', 'Georgia', serif;
+      background: var(--cream);
+      color: var(--text-dark);
+      line-height: 1.6;
+    }
+
+    h1, h2, h3, .nav-links, .btn, .quote, .value-title {
+      font-family: 'Helvetica Neue', 'Arial', sans-serif;
+      font-weight: 600;
+      letter-spacing: -0.02em;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+
+    /* ----- NAVIGATION (sticky) ----- */
+    nav {
+      background: var(--navy);
+      padding: 12px 0;
+      position: sticky;
+      top: 0;
+      z-index: 10;
+      box-shadow: var(--shadow-sm);
+    }
+
+    nav .container {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .logo {
+      font-size: 2rem;
+      font-weight: 700;
+      color: var(--cream);
+      text-decoration: none;
+    }
+
+    .logo span {
+      color: var(--coral);
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 2rem;
+      align-items: center;
+    }
+
+    .nav-links a {
+      color: var(--cream);
+      text-decoration: none;
+      font-size: 1.1rem;
+      padding-bottom: 4px;
+      border-bottom: 2px solid transparent;
+      transition: 0.2s;
+    }
+
+    .nav-links a:hover {
+      color: var(--coral);
+      border-bottom-color: var(--coral);
+    }
+
+    .btn {
+      display: inline-block;
+      background: var(--coral);
+      color: var(--white);
+      padding: 12px 28px;
+      border-radius: 40px;
+      font-weight: 600;
+      text-decoration: none;
+      transition: 0.2s;
+      box-shadow: 0 6px 14px rgba(255,123,107,0.25);
+      border: none;
+      cursor: pointer;
+    }
+
+    .btn:hover {
+      background: var(--coral-dark);
+      transform: translateY(-2px);
+    }
+
+    .btn-outline {
+      background: transparent;
+      color: var(--navy);
+      border: 2px solid var(--navy);
+      box-shadow: none;
+    }
+
+    .btn-outline:hover {
+      background: var(--navy);
+      color: var(--cream);
+    }
+
+    /* ----- PAGE HEADER ----- */
+    .page-header {
+      padding: 60px 0 40px;
+      text-align: center;
+    }
+
+    .page-header h1 {
+      font-size: 3.5rem;
+      color: var(--navy);
+      margin-bottom: 15px;
+    }
+
+    .page-header .subtitle {
+      font-size: 1.3rem;
+      color: var(--text-muted);
+      max-width: 700px;
+      margin: 0 auto;
+      font-style: italic;
+    }
+
+    /* ----- STORY SECTION (two column) ----- */
+    .story-section {
+      padding: 40px 0;
+    }
+
+    .story-grid {
+      display: flex;
+      align-items: center;
+      gap: 50px;
+      flex-wrap: wrap;
+    }
+
+    .story-content {
+      flex: 1 1 350px;
+    }
+
+    .story-content h2 {
+      font-size: 2.2rem;
+      color: var(--navy);
+      margin-bottom: 25px;
+      position: relative;
+    }
+
+    .story-content h2:after {
+      content: '';
+      position: absolute;
+      bottom: -10px;
+      left: 0;
+      width: 60px;
+      height: 4px;
+      background: var(--coral);
+      border-radius: 4px;
+    }
+
+    .story-content p {
+      margin-bottom: 20px;
+      font-size: 1.1rem;
+      color: var(--text-muted);
+    }
+
+    .story-image {
+      flex: 1 1 350px;
+      background: linear-gradient(145deg, #FFDDB7, #FFC3A0);
+      border-radius: var(--border-radius);
+      min-height: 300px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: var(--shadow-md);
+      border: 4px solid white;
+    }
+
+    .story-image i {
+      font-size: 6rem;
+      color: var(--navy);
+      margin: 0 10px;
+    }
+
+    /* ----- MISSION & PHILOSOPHY ----- */
+    .philosophy-section {
+      padding: 50px 0;
+      background: var(--white);
+      border-radius: 50px;
+      margin: 40px 0;
+    }
+
+    .mission-box {
+      text-align: center;
+      max-width: 800px;
+      margin: 0 auto 50px;
+    }
+
+    .mission-box h3 {
+      font-size: 1.8rem;
+      color: var(--navy);
+      margin-bottom: 20px;
+    }
+
+    .mission-box .quote {
+      font-size: 1.6rem;
+      color: var(--coral);
+      font-style: italic;
+      line-height: 1.4;
+    }
+
+    .values-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 30px;
+      margin-top: 40px;
+    }
+
+    .value-card {
+      text-align: center;
+      padding: 25px 15px;
+    }
+
+    .value-icon {
+      width: 80px;
+      height: 80px;
+      margin: 0 auto 20px;
+      background: var(--cream);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--coral);
+      font-size: 2.5rem;
+      border: 3px solid white;
+      box-shadow: var(--shadow-sm);
+    }
+
+    .value-title {
+      font-size: 1.4rem;
+      margin-bottom: 12px;
+      color: var(--navy);
+    }
+
+    .value-card p {
+      color: var(--text-muted);
+    }
+
+    /* ----- INGREDIENTS COMMITMENT ----- */
+    .ingredients-section {
+      padding: 50px 0;
+    }
+
+    .ingredients-header {
+      text-align: center;
+      margin-bottom: 40px;
+    }
+
+    .ingredients-header h2 {
+      font-size: 2.2rem;
+      color: var(--navy);
+    }
+
+    .ingredients-list {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 15px 30px;
+      max-width: 800px;
+      margin: 30px auto;
+    }
+
+    .ingredient-item {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-size: 1.2rem;
+      background: var(--white);
+      padding: 10px 20px;
+      border-radius: 40px;
+      box-shadow: var(--shadow-sm);
+    }
+
+    .ingredient-item i {
+      color: var(--coral);
+      width: 24px;
+    }
+
+    /* ----- FOOTER ----- */
+    footer {
+      background: var(--navy);
+      color: var(--cream);
+      padding: 30px 0;
+      text-align: center;
+      margin-top: 50px;
+    }
+
+    footer a {
+      color: var(--coral);
+      text-decoration: none;
+    }
+
+    /* ----- RESPONSIVE ----- */
+    @media (max-width: 768px) {
+      nav .container {
+        flex-direction: column;
+        gap: 15px;
+      }
+      .nav-links {
+        flex-wrap: wrap;
+        justify-content: center;
+      }
+      .page-header h1 {
+        font-size: 2.5rem;
+      }
+      .story-content h2:after {
+        left: 50%;
+        transform: translateX(-50%);
+      }
+      .story-content {
+        text-align: center;
+      }
+      .story-grid {
+        flex-direction: column-reverse;
+      }
+      .mission-box .quote {
+        font-size: 1.3rem;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .container {
+        padding: 0 18px;
+      }
+    }

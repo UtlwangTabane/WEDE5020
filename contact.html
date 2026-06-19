@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Doughzaar · Contact & Location</title>
+  <!-- Font Icons -->
+  <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"> -->
+  <link rel="stylesheet" href="contact.css">
+  <link rel="icon" type="image/png" href="logo.png">
+
+</head>
+<body>
+
+<!-- STICKY NAVIGATION -->
+<nav>
+  <div class="container">
+    <a href="index.html" class="logo">Dough<span>zaar</span></a>
+    <div class="nav-links">
+      <a href="index.html">Home</a><a href="services.html">Menu</a><a href="about.html">About</a><a href="enquiry.html">Catering</a><a href="contact.html">Contact</a>
+      <a href="#" class="btn">Order Now<span class="cart-count" style="background:white;color:var(--navy);border-radius:50%;padding:0 6px;margin-left:6px;display:none;">0</span></a>
+    </div>
+  </div>
+</nav>
+
+<main>
+  <!-- PAGE HEADER -->
+  <section class="page-header">
+    <div class="container">
+      <h1>Visit Us</h1>
+      <p>Find our bakery in Observatory, Cape Town — pickup, coffee, and donut joy.</p>
+    </div>
+  </section>
+
+  <!-- CONTACT INFO CARDS (address, hours, phone/email) -->
+  <section class="info-section">
+    <div class="container">
+      <div class="info-grid">
+        <!-- Address Card -->
+        <div class="info-card">
+          <i class="fas fa-map-pin"></i>
+          <h3>Pickup Address</h3>
+          <p>44 Victoria Street</p>
+          <p>Observatory, Cape Town</p>
+          <p>7925, South Africa</p>
+          <p style="margin-top: 10px;"><i class="fas fa-car"></i> Street parking available</p>
+        </div>
+        <!-- Hours Card -->
+        <div class="info-card">
+          <i class="fas fa-clock"></i>
+          <h3>Operating Hours</h3>
+          <ul class="hours-list">
+            <li><span>Monday</span><span>Closed</span></li>
+            <li><span>Tuesday – Friday</span><span>8am – 3pm</span></li>
+            <li><span>Saturday</span><span>9am – 2pm</span></li>
+            <li><span>Sunday</span><span>9am – 1pm</span></li>
+          </ul>
+          <p style="margin-top: 15px; font-style: italic;">Holiday hours may vary</p>
+        </div>
+        <!-- Contact Card -->
+        <div class="info-card">
+          <i class="fas fa-envelope"></i>
+          <h3>Get in Touch</h3>
+          <p><i class="fas fa-phone-alt"></i> +27 21 123 4567</p>
+          <p><i class="fab fa-whatsapp"></i> +27 71 234 5678</p>
+          <p><i class="far fa-envelope"></i> hello@doughzaar.co.za</p>
+          <p style="margin-top: 15px;"><i class="fab fa-instagram"></i> @doughzaar · <i class="fab fa-facebook"></i> /doughzaar</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- MAP INTEGRATION (Google Maps embed) -->
+  <section class="map-section">
+    <div class="container">
+      <div class="map-container">
+        <h2><i class="fas fa-map-marked-alt" style="color: var(--coral); margin-right: 10px;"></i>Find Us</h2>
+        <!-- Embedded Google Map (Observatory, Cape Town placeholder) -->
+        <iframe 
+          class="map-frame"
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3310.304869905143!2d18.471234315212515!3d-33.933333!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1dcc5d2e8c8f5c7b%3A0x8c8f9b9b9b9b9b9b!2sObservatory%2C%20Cape%20Town!5e0!3m2!1sen!2sza!4v1616161616161"
+          allowfullscreen="" 
+          loading="lazy" 
+          referrerpolicy="no-referrer-when-downgrade"
+          title="Doughzaar location in Observatory, Cape Town">
+        </iframe>
+        <p style="text-align: center; margin-top: 15px; color: var(--text-muted);">
+          <i class="fas fa-directions"></i> 44 Victoria Street, Observatory · Look for the coral door!
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT FORM -->
+  <section class="form-section">
+    <div class="container">
+      <div class="form-container">
+        <h2>Send Us a Message</h2>
+        <p>Questions about orders, dietary needs, or just want to say hi? We'll reply within 24 hours.</p>
+        
+        <form action="#" method="post">
+          <div class="form-row">
+            <div class="form-group">
+              <label for="name">Full Name *</label>
+              <input type="text" id="name" name="name" placeholder="Your name" required>
+            </div>
+            <div class="form-group">
+              <label for="email">Email Address *</label>
+              <input type="email" id="email" name="email" placeholder="you@example.com" required>
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="form-group">
+              <label for="phone">Phone Number</label>
+              <input type="tel" id="phone" name="phone" placeholder="Optional">
+            </div>
+            <div class="form-group">
+              <label for="subject">Subject *</label>
+              <select id="subject" name="subject" required>
+                <option value="">Select a topic</option>
+                <option value="order">Order question</option>
+                <option value="catering">Catering inquiry</option>
+                <option value="feedback">Feedback</option>
+                <option value="other">Other</option>
+              </select>
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="message">Your Message *</label>
+            <textarea id="message" name="message" rows="5" placeholder="How can we help you?" required></textarea>
+          </div>
+          <button type="submit" class="btn btn-block">Send Message <i class="fas fa-paper-plane"></i></button>
+          <p style="font-size: 0.85rem; margin-top: 15px; color: var(--text-muted); text-align: center;">We respect your privacy and never share your information.</p>
+        </form>
+      </div>
+    </div>
+  </section>
+  <script src="script.js"></script>
+</main>
+
+<footer>
+  <div class="container">
+    <p>© 2025 Doughzaar – Artisanal Donuts. Freshly glazed daily.</p>
+    <p style="margin-top: 10px;"><a href="#">Privacy</a> · <a href="#">Terms</a> · <a href="#">Accessibility</a></p>
+  </div>
+</footer>
+
+</body>
+</html>

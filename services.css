@@ -1,0 +1,428 @@
+/* ----- CSS RESET & VARIABLES ----- */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    :root {
+      --navy: #0F1A2F;
+      --cream: #FDF8F0;
+      --coral: #FF7B6B;
+      --coral-dark: #E56555;
+      --text-dark: #2E241E;
+      --text-muted: #5A4E45;
+      --white: #FFFFFF;
+      --shadow-sm: 0 4px 12px rgba(0,0,0,0.05);
+      --shadow-md: 0 8px 20px rgba(0,0,0,0.08);
+      --border-radius: 30px;
+      --border-radius-sm: 16px;
+    }
+
+    body {
+      font-family: 'Palatino', 'Georgia', serif;
+      background: var(--cream);
+      color: var(--text-dark);
+      line-height: 1.5;
+    }
+
+    h1, h2, h3, .nav-links, .btn, .category-title, .dietary-badge {
+      font-family: 'Helvetica Neue', 'Arial', sans-serif;
+      font-weight: 600;
+      letter-spacing: -0.02em;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+
+    /* ----- NAVIGATION (sticky) ----- */
+    nav {
+      background: var(--navy);
+      padding: 12px 0;
+      position: sticky;
+      top: 0;
+      z-index: 10;
+      box-shadow: var(--shadow-sm);
+    }
+
+    nav .container {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .logo {
+      font-size: 2rem;
+      font-weight: 700;
+      color: var(--cream);
+      text-decoration: none;
+    }
+
+    .logo span {
+      color: var(--coral);
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 2rem;
+      align-items: center;
+    }
+
+    .nav-links a {
+      color: var(--cream);
+      text-decoration: none;
+      font-size: 1.1rem;
+      padding-bottom: 4px;
+      border-bottom: 2px solid transparent;
+      transition: 0.2s;
+    }
+
+    .nav-links a:hover {
+      color: var(--coral);
+      border-bottom-color: var(--coral);
+    }
+
+    .btn {
+      display: inline-block;
+      background: var(--coral);
+      color: var(--white);
+      padding: 12px 28px;
+      border-radius: 40px;
+      font-weight: 600;
+      text-decoration: none;
+      transition: 0.2s;
+      box-shadow: 0 6px 14px rgba(255,123,107,0.25);
+      border: none;
+      cursor: pointer;
+    }
+
+    .btn:hover {
+      background: var(--coral-dark);
+      transform: translateY(-2px);
+    }
+
+    .btn-outline {
+      background: transparent;
+      color: var(--navy);
+      border: 2px solid var(--navy);
+      box-shadow: none;
+    }
+
+    .btn-outline:hover {
+      background: var(--navy);
+      color: var(--cream);
+    }
+
+    /* ----- PAGE HEADER ----- */
+    .page-header {
+      padding: 50px 0 30px;
+      text-align: center;
+    }
+
+    .page-header h1 {
+      font-size: 3rem;
+      color: var(--navy);
+      margin-bottom: 15px;
+    }
+
+    .page-header p {
+      font-size: 1.2rem;
+      color: var(--text-muted);
+      max-width: 600px;
+      margin: 0 auto;
+    }
+
+    /* ----- MENU CATEGORIES ----- */
+    .menu-section {
+      padding: 40px 0;
+    }
+
+    .category-title {
+      font-size: 2.2rem;
+      color: var(--navy);
+      margin-bottom: 30px;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      border-bottom: 3px solid var(--coral);
+      padding-bottom: 12px;
+    }
+
+    .category-title i {
+      color: var(--coral);
+      font-size: 2rem;
+    }
+
+    .menu-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+      gap: 30px;
+    }
+
+    /* ----- MENU CARD ----- */
+    .menu-card {
+      background: var(--white);
+      border-radius: var(--border-radius-sm);
+      overflow: hidden;
+      box-shadow: var(--shadow-sm);
+      transition: transform 0.2s, box-shadow 0.2s;
+      border: 1px solid rgba(0,0,0,0.03);
+      display: flex;
+      flex-direction: column;
+    }
+
+    .menu-card:hover {
+      transform: translateY(-5px);
+      box-shadow: var(--shadow-md);
+    }
+
+    .menu-img {
+      height: 180px;              /* Fixed height */
+      width: 100%;                /* Full width of card */
+      overflow: hidden;           /* Crop any overflowing parts */
+      background: #EEDCC8;        /* Fallback color */
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .menu-img img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;          /* This is the key – covers container without distortion */
+      display: block;
+    }
+
+    .menu-content {
+      padding: 20px;
+      flex: 1;
+    }
+
+    .menu-title {
+      font-size: 1.5rem;
+      margin-bottom: 8px;
+      color: var(--navy);
+    }
+
+    .menu-desc {
+      color: var(--text-muted);
+      margin-bottom: 12px;
+      font-style: italic;
+      line-height: 1.4;
+    }
+
+    .menu-price {
+      font-size: 1.8rem;
+      font-weight: 700;
+      color: var(--coral);
+      margin-bottom: 12px;
+    }
+
+    .dietary-info {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-bottom: 18px;
+    }
+
+    .dietary-badge {
+      display: inline-block;
+      background: var(--cream);
+      color: var(--navy);
+      padding: 4px 10px;
+      border-radius: 20px;
+      font-size: 0.8rem;
+      border: 1px solid #ddd;
+    }
+
+    .dietary-badge i {
+      margin-right: 4px;
+      color: var(--coral);
+    }
+
+    .menu-card .btn {
+      margin-top: auto;
+      text-align: center;
+      padding: 10px 0;
+      border-radius: 0 0 var(--border-radius-sm) var(--border-radius-sm);
+    }
+
+    /* ----- CATERING CTA ----- */
+    .catering-cta {
+      background: var(--navy);
+      color: var(--cream);
+      padding: 50px 0;
+      text-align: center;
+      border-radius: 50px 50px 0 0;
+      margin-top: 40px;
+    }
+
+    .catering-cta h3 {
+      font-size: 2rem;
+      margin-bottom: 15px;
+    }
+
+    .catering-cta p {
+      color: rgba(255,255,255,0.8);
+      max-width: 600px;
+      margin: 0 auto 25px;
+    }
+
+    /* ----- FOOTER (simple) ----- */
+    footer {
+      background: var(--navy);
+      color: var(--cream);
+      padding: 30px 0;
+      text-align: center;
+      font-size: 0.9rem;
+    }
+
+    footer a {
+      color: var(--coral);
+      text-decoration: none;
+    }
+
+    /* ----- RESPONSIVE ----- */
+    @media (max-width: 768px) {
+      nav .container {
+        flex-direction: column;
+        gap: 15px;
+      }
+      .nav-links {
+        flex-wrap: wrap;
+        justify-content: center;
+      }
+      .page-header h1 {
+        font-size: 2.5rem;
+      }
+      .category-title {
+        font-size: 1.8rem;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .container {
+        padding: 0 18px;
+      }
+      .menu-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    /* Clear Cart Button */
+    .clear-cart-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      background: transparent;
+      color: var(--coral, #FF7B6B);
+      border: 2px solid var(--coral, #FF7B6B);
+      padding: 12px 28px;
+      border-radius: 40px;
+      font-family: 'Helvetica Neue', Arial, sans-serif;
+      font-weight: 600;
+      font-size: 1rem;
+      cursor: pointer;
+      transition: all 0.2s ease;
+      box-shadow: 0 4px 10px rgba(255,123,107,0.15);
+    }
+
+    .clear-cart-btn:hover {
+      background: var(--coral, #FF7B6B);
+      color: white;
+      box-shadow: 0 6px 14px rgba(255,123,107,0.3);
+      transform: translateY(-1px);
+    }
+
+    .clear-cart-btn i {
+      font-size: 1.2rem;
+    }
+
+    /* Confirmation Dialog Overlay */
+    .confirm-dialog {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(15, 26, 47, 0.75); /* navy with opacity */
+      z-index: 1001;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .confirm-content {
+      background: white;
+      padding: 30px;
+      border-radius: 20px;
+      max-width: 400px;
+      text-align: center;
+      box-shadow: 0 20px 40px rgba(0,0,0,0.2);
+      animation: popIn 0.2s ease;
+    }
+
+    @keyframes popIn {
+      from { transform: scale(0.9); opacity: 0; }
+      to { transform: scale(1); opacity: 1; }
+    }
+
+    .confirm-content h3 {
+      color: var(--navy, #0F1A2F);
+      margin-bottom: 10px;
+      font-family: 'Helvetica Neue', Arial, sans-serif;
+    }
+
+    .confirm-content p {
+      color: #5A4E45;
+      margin-bottom: 25px;
+      font-size: 0.95rem;
+    }
+
+    .confirm-actions {
+      display: flex;
+      gap: 12px;
+      justify-content: center;
+    }
+
+    .btn-confirm-yes,
+    .btn-confirm-no {
+      border: none;
+      padding: 12px 24px;
+      border-radius: 30px;
+      font-weight: 600;
+      cursor: pointer;
+      font-family: 'Helvetica Neue', Arial, sans-serif;
+      transition: 0.2s;
+    }
+
+    .btn-confirm-yes {
+      background: var(--coral, #FF7B6B);
+      color: white;
+    }
+
+    .btn-confirm-yes:hover {
+      background: #E56555;
+    }
+
+    .btn-confirm-no {
+      background: transparent;
+      border: 2px solid var(--navy, #0F1A2F);
+      color: var(--navy);
+    }
+
+    .btn-confirm-no:hover {
+      background: var(--navy);
+      color: white;
+    }
+
+    .clear-cart-btn {
+      display: block;        /* Changes from inline-flex */
+      margin: 0 auto;
+      width: fit-content;    /* So it doesn’t stretch full width */
+    }
+
+    

@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Doughzaar · Artisanal Donuts</title>
+  <link rel="stylesheet" href="index.css">
+  <link rel="icon" type="image/png" href="logo.png">
+
+</head>
+<body>
+
+<!-- STICKY NAVIGATION -->
+<nav>
+  <div class="container">
+    <div class="logo">Dough<span>zaar</span></div>
+    <div class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="services.html">Menu</a>
+      <a href="about.html">About</a>
+      <a href="enquiry.html">Catering</a>
+      <a href="contact.html">Contact</a>
+      <a href="#" class="btn">Order Now <span class="cart-count" style="background:white;color:#0F1A2F;border-radius:50%;padding:0 6px;margin-left:6px;display:none;">0</span></a>
+  </div>
+</nav>
+
+<!-- HERO SECTION (high quality image + CTA) -->
+<section class="hero">
+  <div class="container hero-grid">
+    <div class="hero-content">
+      <span class="hero-badge"><i class="fas fa-star"></i> Handcrafted Daily</span>
+      <h1>Joy in every <span class="hero-highlight">bite</span><br>crafted with passion.</h1>
+      <p class="hero-description">
+        Gourmet donuts made from scratch with premium ingredients. 
+        Classic comfort meets creative, high‑quality flavours.
+      </p>
+      <div class="hero-cta">
+        <a href="#" class="btn"><i class="fas fa-shopping-bag"></i> Order Now</a>
+        <a href="#" class="btn btn-outline">View Menu</a>
+      </div>
+      <div class="delivery-options">
+        <span><i class="fas fa-check-circle" style="color: var(--coral);"></i> Pickup</span>
+        <span><i class="fas fa-check-circle" style="color: var(--coral);"></i> Local Delivery</span>
+      </div>
+    </div>
+    <div class="hero-image">
+      <img src="hero_image_freshly_glazed_donuts.png" alt="Freshly glazed gourmet donuts">
+    </div>
+  </div>
+</section>
+
+<!-- WEEKLY FLAVOUR LINEUP (preview) -->
+<section class="weekly-section">
+  <div class="container">
+    <div class="weekly-header">
+      <h2>This Week's Flavour Lineup</h2>
+      <p style="color: var(--text-muted); margin-top: 20px;">Limited batches · Fresh daily</p>
+    </div>
+    
+    <div class="flavour-grid">
+      <!-- Flavour 1: Salted Honeycomb Crunch (featured) -->
+      <div class="flavour-card">
+        <div class="flavour-img">
+          <img src="salted_honeycomb.png" alt="Salted Honeycomb Donut" style="width: 100%; height: 100%; object-fit: cover; border-radius: 50%;">
+        </div>
+        <h3>Salted Honeycomb</h3>
+        <p class="flavour-desc">Brown butter brioche, honey glaze, sea salt</p>
+        <div class="flavour-price">R45</div>
+        <span class="flavour-tag">⭐ Staff Pick</span>
+      </div>
+      
+      <!-- Flavour 2: Classic Glazed -->
+      <div class="flavour-card">
+        <div class="flavour-img">
+          <i class="fas fa-donut"></i>
+          <img src="classic_glazed.png" alt="Classic Glazed Donut" style="width: 100%; height: 100%; object-fit: cover; border-radius: 50%;">
+        </div>
+        <h3>Classic Glazed</h3>
+        <p class="flavour-desc">Vanilla bean glaze, soft yeasted dough</p>
+        <div class="flavour-price">R28</div>
+        <span class="flavour-tag">Vegetarian</span>
+      </div>
+      
+      <!-- Flavour 3: Double Chocolate -->
+      <div class="flavour-card">
+        <div class="flavour-img">
+          <i class="fas fa-donut"></i>
+          <img src="double_chocolate.png" alt="Double Chocolate Donut" style="width: 100%; height: 100%; object-fit: cover; border-radius: 50%;">
+        </div>
+        <h3>Double Chocolate</h3>
+        <p class="flavour-desc">Dark chocolate cake, fudge glaze</p>
+        <div class="flavour-price">R32</div>
+        <span class="flavour-tag">Vegetarian</span>
+      </div>
+      
+      <!-- Flavour 4: Rose & Pistachio -->
+      <div class="flavour-card">
+        <div class="flavour-img">
+          <img src="rose_and_pistachio.png" alt="Rose & Pistachio Donut" style="width: 100%; height: 100%; object-fit: cover; border-radius: 50%;">
+        </div>
+        <h3>Rose & Pistachio</h3>
+        <p class="flavour-desc">Rosewater glaze, crushed pistachios</p>
+        <div class="flavour-price">R38</div>
+        <span class="flavour-tag">Vegan option</span>
+      </div>
+    </div>
+    
+    <div class="weekly-cta">
+      <a href="#" class="btn">Order Weekly Specials <i class="fas fa-arrow-right"></i></a>
+    </div>
+    <footer>
+      <section>
+        <div class="container">
+          <h2>Follow Our Creations</h2>
+          <div id="instagram-feed" style="display:grid; grid-template-columns:repeat(auto-fit,minmax(200px,1fr)); gap:20px;"></div>
+        </div>
+      </section>
+    </footer>
+    <script src="script.js"></script>
+  </div>
+</section>
+</body>
+</html>

@@ -1,0 +1,350 @@
+
+    /* ----- CSS RESET & VARIABLES ----- */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    :root {
+      --navy: #0F1A2F;
+      --cream: #FDF8F0;
+      --coral: #FF7B6B;
+      --coral-dark: #E56555;
+      --text-dark: #2E241E;
+      --text-muted: #5A4E45;
+      --white: #FFFFFF;
+      --shadow-sm: 0 4px 12px rgba(0,0,0,0.05);
+      --shadow-md: 0 8px 20px rgba(0,0,0,0.08);
+      --border-radius: 40px;
+      --border-radius-sm: 20px;
+    }
+
+    body {
+      font-family: 'Palatino', 'Georgia', serif;
+      background: var(--cream);
+      color: var(--text-dark);
+      line-height: 1.5;
+    }
+
+    h1, h2, h3, .nav-links, .btn, .badge, .flavour-tag {
+      font-family: 'Helvetica Neue', 'Arial', sans-serif;
+      font-weight: 600;
+      letter-spacing: -0.02em;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+
+    /* ----- NAVIGATION (sticky) ----- */
+    nav {
+      background: var(--navy);
+      padding: 12px 0;
+      position: sticky;
+      top: 0;
+      z-index: 10;
+      box-shadow: var(--shadow-sm);
+    }
+
+    nav .container {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .logo {
+      font-size: 2rem;
+      font-weight: 700;
+      color: var(--cream);
+    }
+
+    .logo span {
+      color: var(--coral);
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 2rem;
+      align-items: center;
+    }
+
+    .nav-links a {
+      color: var(--cream);
+      text-decoration: none;
+      font-size: 1.1rem;
+      padding-bottom: 4px;
+      border-bottom: 2px solid transparent;
+      transition: 0.2s;
+    }
+
+    .nav-links a:hover {
+      color: var(--coral);
+      border-bottom-color: var(--coral);
+    }
+
+    .btn {
+      display: inline-block;
+      background: var(--coral);
+      color: var(--white);
+      padding: 12px 28px;
+      border-radius: 40px;
+      font-weight: 600;
+      text-decoration: none;
+      transition: 0.2s;
+      box-shadow: 0 6px 14px rgba(255,123,107,0.25);
+      border: none;
+      cursor: pointer;
+    }
+
+    .btn:hover {
+      background: var(--coral-dark);
+      transform: translateY(-2px);
+    }
+
+    .btn-outline {
+      background: transparent;
+      color: var(--navy);
+      border: 2px solid var(--navy);
+      box-shadow: none;
+    }
+
+    .btn-outline:hover {
+      background: var(--navy);
+      color: var(--cream);
+    }
+
+    /* ----- HERO SECTION (high-quality image + CTA) ----- */
+    .hero {
+      padding: 50px 0;
+    }
+
+    .hero-grid {
+      display: flex;
+      align-items: center;
+      gap: 50px;
+      flex-wrap: wrap;
+    }
+
+    .hero-content {
+      flex: 1 1 350px;
+    }
+
+    .hero-badge {
+      display: inline-block;
+      background: var(--coral);
+      color: var(--white);
+      padding: 6px 18px;
+      border-radius: 30px;
+      font-size: 0.9rem;
+      text-transform: uppercase;
+      margin-bottom: 20px;
+    }
+
+    .hero-content h1 {
+      font-size: 3rem;
+      line-height: 1.2;
+      color: var(--navy);
+      margin-bottom: 20px;
+    }
+
+    .hero-highlight {
+      color: var(--coral);
+      border-bottom: 3px dotted var(--coral);
+    }
+
+    .hero-description {
+      font-size: 1.2rem;
+      color: var(--text-muted);
+      margin-bottom: 30px;
+    }
+
+    .hero-cta {
+      display: flex;
+      gap: 16px;
+      flex-wrap: wrap;
+      margin-bottom: 24px;
+    }
+
+    .delivery-options {
+      display: flex;
+      gap: 24px;
+      color: var(--text-muted);
+    }
+
+    /* Hero image – using a beautiful gradient with donut illustration */
+    .hero-image {
+      flex: 1 1 350px;
+      background: linear-gradient(145deg, #FFDDB7, #FFC3A0);
+      border-radius: var(--border-radius);
+      min-height: 320px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: var(--shadow-md);
+      border: 4px solid white;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero-image img {
+      max-width: 100%;
+      height: auto;
+      display: block;
+      border-radius: var(--border-radius-sm);
+    }
+
+    /* Fallback / placeholder if image fails */
+    .hero-image .image-placeholder {
+      text-align: center;
+      padding: 20px;
+    }
+
+    .image-placeholder i {
+      font-size: 5rem;
+      color: var(--navy);
+      margin: 0 5px;
+    }
+
+    /* ----- WEEKLY FLAVOUR LINEUP (preview) ----- */
+    .weekly-section {
+      padding: 60px 0;
+      background: var(--white);
+      border-radius: 50px 50px 0 0;
+      margin-top: -30px;
+    }
+
+    .weekly-header {
+      text-align: center;
+      margin-bottom: 40px;
+    }
+
+    .weekly-header h2 {
+      font-size: 2.5rem;
+      color: var(--navy);
+      display: inline-block;
+      position: relative;
+    }
+
+    .weekly-header h2:after {
+      content: '';
+      position: absolute;
+      bottom: -10px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 70px;
+      height: 4px;
+      background: var(--coral);
+      border-radius: 4px;
+    }
+
+    .flavour-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 30px;
+    }
+
+    .flavour-card {
+      background: var(--cream);
+      border-radius: var(--border-radius-sm);
+      padding: 25px 20px;
+      text-align: center;
+      box-shadow: var(--shadow-sm);
+      transition: transform 0.2s;
+      border: 1px solid rgba(0,0,0,0.02);
+    }
+
+    .flavour-card:hover {
+      transform: translateY(-5px);
+      box-shadow: var(--shadow-md);
+    }
+
+    .flavour-img {
+      width: 120px;
+      height: 120px;
+      margin: 0 auto 20px;
+      background: #EEDCC8;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--navy);
+      font-size: 3rem;
+      border: 3px solid white;
+      box-shadow: var(--shadow-sm);
+    }
+
+    .flavour-card h3 {
+      font-size: 1.5rem;
+      margin-bottom: 8px;
+      color: var(--navy);
+    }
+
+    .flavour-desc {
+      color: var(--text-muted);
+      margin-bottom: 12px;
+      font-style: italic;
+    }
+
+    .flavour-price {
+      font-size: 1.4rem;
+      font-weight: 700;
+      color: var(--coral);
+      margin-bottom: 15px;
+    }
+
+    .flavour-tag {
+      display: inline-block;
+      background: var(--navy);
+      color: var(--cream);
+      padding: 4px 12px;
+      border-radius: 20px;
+      font-size: 0.8rem;
+    }
+
+    .weekly-cta {
+      text-align: center;
+      margin-top: 40px;
+    }
+
+    /* ----- RESPONSIVE ----- */
+    @media (max-width: 768px) {
+      nav .container {
+        flex-direction: column;
+        gap: 15px;
+      }
+      .nav-links {
+        flex-wrap: wrap;
+        justify-content: center;
+      }
+      .hero-grid {
+        flex-direction: column-reverse;
+        text-align: center;
+      }
+      .hero-content h1 {
+        font-size: 2.3rem;
+      }
+      .hero-cta {
+        justify-content: center;
+      }
+      .delivery-options {
+        justify-content: center;
+      }
+      .weekly-header h2 {
+        font-size: 2rem;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .container {
+        padding: 0 18px;
+      }
+      .hero-cta .btn {
+        width: 100%;
+      }
+    }
+
+    /* Font Awesome for icons (optional but adds charm) */
+    /* @import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css'); */
